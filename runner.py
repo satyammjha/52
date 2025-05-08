@@ -11,7 +11,7 @@ def run_script(script_name):
     log(f"Running {script_name}...")
 
     try:
-        subprocess.run(['python', script_name], check=True)
+        subprocess.run(['python3', script_name], check=True)
         elapsed = time.time() - start_time
         log(f"{script_name} completed successfully in {elapsed:.2f} seconds.")
         return elapsed
