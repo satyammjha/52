@@ -11,7 +11,7 @@ def run_script(script_name):
     log(f"Running {script_name}...")
 
     try:
-        subprocess.run(['python3', script_name], check=True)
+        subprocess.run(['python', script_name], check=True)
         elapsed = time.time() - start_time
         log(f"{script_name} completed successfully in {elapsed:.2f} seconds.")
         return elapsed
@@ -23,11 +23,11 @@ def main():
     while True:
         loop_start = time.time()
 
-        time1 = run_script('52low.py')
-        time2 = run_script('52high.py')
+        time1 = run_script('low.py')
+        time2 = run_script('high.py')
 
         total_elapsed = time.time() - loop_start
-        sleep_time = max(0, 600 - total_elapsed)
+        sleep_time = max(0, 60 - total_elapsed)
 
         if sleep_time > 0:
             log(f"Sleeping for {sleep_time:.2f} seconds to maintain 10-minute interval.\n")
