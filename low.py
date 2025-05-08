@@ -9,7 +9,7 @@ print("Starting script...")
 # --- Database Setup ---
 sqlite_db = '52lowstocks.db'
 
-mongo_client = MongoClient("mongodb+srv://admin:Wt9cPRsB3eZazNeA@cluster0.hmuzu.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+mongo_client = MongoClient("mongodb+srv://gundeepsingh2005:bNYMmhsrIxUR6xpL@cluster0.ewzqcvi.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
 mongo_db = mongo_client['52HIGH_LOW']
 mongo_collection = mongo_db['52weeklow']
 
